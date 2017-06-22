@@ -1,0 +1,7 @@
+{
+  "name": "essentials",
+  "version": "0.0.0",
+  "description": "The essential functional tool box for TypeScript",
+  "repository": "git@github.com:herp-inc/essentials.git",
+  "license": "MIT"
+}
