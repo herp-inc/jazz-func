@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "description": "The essential functional tool box for TypeScript",
   "repository": "git@github.com:herp-inc/essentials.git",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.3.4"
+  }
 }
