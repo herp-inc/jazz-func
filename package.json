@@ -5,6 +5,14 @@
   "repository": "git@github.com:herp-inc/essentials.git",
   "license": "MIT",
   "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/power-assert": "^1.4.29",
+    "mocha": "^3.4.2",
+    "power-assert": "^1.4.4",
+    "ts-node": "^3.1.0",
     "typescript": "^2.3.4"
+  },
+  "scripts": {
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha test/*.ts --require ts-node/register"
   }
 }
