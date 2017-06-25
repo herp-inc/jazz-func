@@ -1,0 +1,11 @@
+export { Dictionary } from './Dictionary';
+export { empty } from './empty';
+export { entries } from './entries';
+export { filter, filterC } from './filter';
+export { fromArray } from './fromArray';
+export { insert, insertC } from './insert';
+export { keys } from './keys';
+export { map, mapC } from './map';
+export { mapWithKey, mapWithKeyC } from './mapWithKey';
+export { singleton, singletonC } from './singleton';
+export { values } from './values';
