@@ -13,6 +13,6 @@
     "typescript": "^2.3.4"
   },
   "scripts": {
-    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha test/*.ts --require ts-node/register"
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha test/**/*.ts --require ts-node/register"
   }
 }
