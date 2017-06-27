@@ -7,5 +7,6 @@ export { insert, insertC } from './insert';
 export { keys } from './keys';
 export { map, mapC } from './map';
 export { mapWithKey, mapWithKeyC } from './mapWithKey';
+export { remove, removeC } from './remove';
 export { singleton, singletonC } from './singleton';
 export { values } from './values';
