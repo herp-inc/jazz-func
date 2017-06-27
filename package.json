@@ -1,8 +1,8 @@
 {
-  "name": "essentials",
+  "name": "jazz-func",
   "version": "0.0.0",
   "description": "The essential functional tool box for TypeScript",
-  "repository": "git@github.com:herp-inc/essentials.git",
+  "repository": "git@github.com:herp-inc/jazz-func.git",
   "license": "MIT",
   "devDependencies": {
     "@types/mocha": "^2.2.41",
