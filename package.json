@@ -1,6 +1,6 @@
 {
   "name": "jazz-func",
-  "description": "The essential functional tool box for TypeScript",
+  "description": "The essential toolbox for functional programming in TypeScript",
   "version": "0.1.0",
   "devDependencies": {
     "@types/mocha": "^2.2.41",
