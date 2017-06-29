@@ -1,18 +1,31 @@
 {
   "name": "jazz-func",
-  "version": "0.0.0",
   "description": "The essential toolbox for functional programming in TypeScript",
-  "repository": "git@github.com:herp-inc/jazz-func.git",
-  "license": "MIT",
+  "version": "0.1.0",
+  "bugs": "https://github.com/herp-inc/jazz-func/issues",
+  "contributors": [
+    "hiroqn",
+    "ryota-ka"
+  ],
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/power-assert": "^1.4.29",
     "mocha": "^3.4.2",
     "power-assert": "^1.4.4",
+    "rollup": "^0.43.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "ts-node": "^3.1.0",
     "typescript": "^2.3.4"
   },
+  "keywords": [
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.mjs",
+  "repository": "git@github.com:herp-inc/jazz-func.git",
   "scripts": {
+    "build": "bin/deploy.sh",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha test/**/*.ts --require ts-node/register"
   }
 }
