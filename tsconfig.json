@@ -10,6 +10,9 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "strict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
     "target": "es2015"
   },
   "include": [
