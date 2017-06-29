@@ -1,7 +1,7 @@
 {
   "name": "jazz-func",
   "version": "0.0.0",
-  "description": "The essential functional tool box for TypeScript",
+  "description": "The essential toolbox for functional programming in TypeScript",
   "repository": "git@github.com:herp-inc/jazz-func.git",
   "license": "MIT",
   "devDependencies": {
