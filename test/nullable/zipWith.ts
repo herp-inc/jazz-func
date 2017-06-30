@@ -2,7 +2,7 @@ import 'mocha';
 import * as assert from 'power-assert';
 import { zipWith } from '../../src/nullable/zipWith';
 
-describe('Nullable.zip()', () => {
+describe('Nullable.zipWith()', () => {
     function f(n: number, str: string): string {
         return `${n}:${str}`;
     }
