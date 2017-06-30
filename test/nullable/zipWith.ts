@@ -19,7 +19,7 @@ describe('Nullable.zip()', () => {
         assert.equal(zipWith(f, null, 'hello, world'), null);
     });
 
-    it('should zipWith(f, non-null, non-null) to [non-null, non-null]', () => {
+    it('should zipWith(f, non-null, non-null) to f(non-null, non-null)', () => {
         assert.deepEqual(zipWith(f, 42, 'hello, world'), '42:hello, world');
     });
 });
