@@ -5,6 +5,7 @@ export { filter, filterC } from './filter';
 export { fromArray } from './fromArray';
 export { insert, insertC } from './insert';
 export { keys } from './keys';
+export { lookup, lookupC } from './lookup';
 export { map, mapC } from './map';
 export { mapWithKey, mapWithKeyC } from './mapWithKey';
 export { remove, removeC } from './remove';
