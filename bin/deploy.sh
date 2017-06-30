@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-rm  -rf lib
+rm -rf lib
 tsc -p .
 for nm in lib/*.js lib/**/*.js; do
     mv $nm ${nm%.js}.mjs;
