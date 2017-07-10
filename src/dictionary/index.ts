@@ -8,6 +8,7 @@ export { keys } from './keys';
 export { lookup, lookupC } from './lookup';
 export { map, mapC } from './map';
 export { mapWithKey, mapWithKeyC } from './mapWithKey';
+export { modify, modifyC } from './modify';
 export { remove, removeC } from './remove';
 export { singleton, singletonC } from './singleton';
 export { values } from './values';
