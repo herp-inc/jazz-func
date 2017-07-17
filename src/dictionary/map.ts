@@ -1,14 +1,18 @@
 import { Dictionary } from './Dictionary';
-import { fromArray } from './fromArray';
-import { entries } from './entries';
-import { Entry } from './Entry';
 
+export function map<K extends string, T, U>(f: (x: T) => U, dict: Record<K, T>): Record<K, U>
 export function map<T, U>(f: (x: T) => U, dict: Dictionary<T>): Dictionary<U> {
-    return fromArray(entries(dict).map<Entry<U>>(([k, v]) => [k, f(v)]));
+    const newDict: any = Object.create(null);
+    for (const key in dict) {
+        newDict[key] = f(dict[key]);
+    }
+
+    return newDict
 }
 
+export function mapC<K extends string, T, U>(f: (x: T) => U): (dict: Record<K, T>) => Record<K, U>
 export function mapC<T, U>(f: (x: T) => U): (dict: Dictionary<T>) => Dictionary<U> {
-    return function (dict: Dictionary<T>): Dictionary<U> {
+    return function (dict) {
         return map(f, dict);
     }
 }
