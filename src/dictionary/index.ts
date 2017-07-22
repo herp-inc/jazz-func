@@ -3,6 +3,7 @@ export { empty } from './empty';
 export { entries } from './entries';
 export { filter, filterC } from './filter';
 export { fromArray } from './fromArray';
+export { hasKey, hasKeyC } from './hasKey';
 export { insert, insertC } from './insert';
 export { keys } from './keys';
 export { lookup, lookupC } from './lookup';
