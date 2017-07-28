@@ -4,6 +4,7 @@ export { entries } from './entries';
 export { filter, filterC } from './filter';
 export { fromArray } from './fromArray';
 export { hasKey, hasKeyC } from './hasKey';
+export { innerJoin, innerJoinC } from './innerJoin';
 export { insert, insertC } from './insert';
 export { insertMany, insertManyC } from './insertMany';
 export { keys } from './keys';
