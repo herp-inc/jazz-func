@@ -8,6 +8,7 @@ export { innerJoin, innerJoinC } from './innerJoin';
 export { insert, insertC } from './insert';
 export { insertMany, insertManyC } from './insertMany';
 export { keys } from './keys';
+export { leftOuterJoin, leftOuterJoinC } from './leftOuterJoin';
 export { lookup, lookupC } from './lookup';
 export { map, mapC } from './map';
 export { mapWithKey, mapWithKeyC } from './mapWithKey';
