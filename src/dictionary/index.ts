@@ -14,5 +14,6 @@ export { map, mapC } from './map';
 export { mapWithKey, mapWithKeyC } from './mapWithKey';
 export { modify, modifyC } from './modify';
 export { remove, removeC } from './remove';
+export { rightOuterJoin, rightOuterJoinC } from './rightOuterJoin';
 export { singleton, singletonC } from './singleton';
 export { values } from './values';
