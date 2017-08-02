@@ -1,7 +1,7 @@
 {
   "name": "jazz-func",
   "description": "The essential toolbox for functional programming in TypeScript",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "bugs": "https://github.com/herp-inc/jazz-func/issues",
   "contributors": [
     "hiroqn",
