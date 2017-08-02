@@ -18,7 +18,9 @@ describe('Nullable.isNull()', () => {
     it('should behave as a type guard', () => {
         const x: Nullable<number> = 42;
 
-        if (!isNull(x)) {
+        if (isNull(x)) {
+            assert.ok(false);
+        } else {
             const y: number = x; // typechecks
             assert.equal(y, 42);
         }
