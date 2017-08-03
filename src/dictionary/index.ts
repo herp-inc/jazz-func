@@ -3,6 +3,7 @@ export { empty } from './empty';
 export { entries } from './entries';
 export { filter, filterC } from './filter';
 export { fromArray } from './fromArray';
+export { fullOuterJoin } from './fullOuterJoin';
 export { hasKey, hasKeyC } from './hasKey';
 export { innerJoin, innerJoinC } from './innerJoin';
 export { insert, insertC } from './insert';
