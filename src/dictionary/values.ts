@@ -3,7 +3,7 @@ import { Dictionary } from './Dictionary';
 export function values<T>(dict: Dictionary<T>): T[] {
     const xs: T[] = [];
 
-    for (const key in dict) xs.push(dict[key]);
+    for (const key in dict) xs.push(dict[key] as T);
 
     return xs;
 }

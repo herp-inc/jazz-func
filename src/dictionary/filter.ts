@@ -4,7 +4,13 @@ import { empty } from './empty';
 export function filter<T>(f: (x: T) => boolean, dict: Dictionary<T>): Dictionary<T> {
     const newDict: Dictionary<T> = empty<T>();
 
-    for (const key in dict) if (f(dict[key])) newDict[key] = dict[key];
+    for (const key in dict) {
+        const value = dict[key] as T;
+
+        if (f(value)) {
+            newDict[key] = value;
+        }
+    }
 
     return newDict;
 }

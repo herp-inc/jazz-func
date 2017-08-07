@@ -1,8 +1,9 @@
 import { Dictionary } from './Dictionary';
+import { hasKey } from './hasKey';
 import { insert } from './insert';
 
 export function modify<T>(key: string, f: (x: T) => T, dict: Dictionary<T>): Dictionary<T> {
-    if (!Object.prototype.hasOwnProperty.call(dict, key)) return dict;
+    if (!hasKey(key, dict)) return dict;
 
     return insert(key, f(dict[key]), dict);
 }
