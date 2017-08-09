@@ -14,7 +14,7 @@ describe('pathOr', () => {
     });
 
     it('should return number from String.length', () => {
-        const l = pathOr(['length'], 6, "hiroqn");
+        const l = pathOr(['length'], 0, "hiroqn");
         assert.deepEqual(l, 6);
     });
 

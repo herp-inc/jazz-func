@@ -1,26 +1,22 @@
 export function pathOr(path: string[], seed: boolean, x: any): boolean
 export function pathOr(path: string[], seed: number, x: any): number
 export function pathOr(path: string[], seed: string, x: any): string
-export function pathOr<T extends string | number | boolean>(path: string[], seed: T, x: any): T {
+export function pathOr<T extends string | number | boolean>(path: string[], def: T, target: any): T {
     let i = 0;
 
-    if (typeof x === 'undefined' || x === null) {
-        return seed;
-    }
-
-    let next: any = x;
+    let next: any = target;
 
     while (i < path.length) {
-        if (typeof next[path[i]] !== 'undefined' && next[path[i]] !== null) {
+        if (typeof next !== 'undefined' && next !== null) {
             next = next[path[i]];
         } else {
-            return seed
+            return def
         }
         i += 1 | 0;
     }
 
-    if (typeof next === typeof seed) {
+    if (typeof next === typeof def) {
         return next;
     }
-    return seed;
+    return def;
 }
