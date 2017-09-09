@@ -1,3 +1,4 @@
+export { alt, altC } from './alt';
 export { isNotNull } from './isNotNull';
 export { isNull } from './isNull';
 export { Nullable } from './Nullable';
