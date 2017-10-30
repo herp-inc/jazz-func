@@ -22,12 +22,12 @@ describe('Dictionary.modifyC()', () => {
         const dict = { foo: 0, bar: 42 };
         const expected = { foo: 0, bar: 84 };
 
-        assert.deepEqual(modifyC<number>('bar')(n => n * 2)(dict), expected);
+        assert.deepEqual(modifyC<number>('bar', n => n * 2)(dict), expected);
     });
 
     it('should return the given dictionary itself when the key is not present in the dictionary', () => {
         const dict = { foo: 0, bar: 42 };
 
-        assert.deepEqual(modifyC<number>('baz')(n => n * 2)(dict), dict);
+        assert.deepEqual(modifyC<number>('baz', n => n * 2)(dict), dict);
     });
 });

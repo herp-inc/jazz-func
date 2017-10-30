@@ -9,8 +9,10 @@ export function singleton<T>(key: string, value: T): Dictionary<T> {
     return dict;
 }
 
-export function singletonC<T>(key: string): (value: T) => Dictionary<T> {
-    return function (value: T): Dictionary<T> {
+export function singletonC(key: string): <T>(value: T) => Dictionary<T>
+export function singletonC<T>(key: string): (value: T) => Dictionary<T>
+export function singletonC(key: string): <T>(value: T) => Dictionary<T> {
+    return function <T>(value: T): Dictionary<T> {
         return singleton(key, value);
     }
 }

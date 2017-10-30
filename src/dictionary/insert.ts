@@ -9,10 +9,8 @@ export function insert<T>(key: string, value: T, dict: Dictionary<T>): Dictionar
     return newDict;
 }
 
-export function insertC<T>(key: string): (value: T) => (dict: Dictionary<T>) => Dictionary<T> {
-    return function (value: T): (dict: Dictionary<T>) => Dictionary<T> {
-        return function (dict: Dictionary<T>): Dictionary<T> {
-            return insert(key, value, dict);
-        }
+export function insertC<T>(key: string, value: T): (dict: Dictionary<T>) => Dictionary<T> {
+    return function (dict: Dictionary<T>): Dictionary<T> {
+        return insert(key, value, dict);
     }
 }

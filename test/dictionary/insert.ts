@@ -10,6 +10,6 @@ describe('Dictionary.insert()', () => {
 
 describe('Dictionary.insertC()', () => {
     it('should insert an element to the dictionary', () => {
-        assert.deepEqual(insertC('foo')(42)({}), { foo: 42 });
+        assert.deepEqual(insertC('foo', 42)({}), { foo: 42 });
     });
 });

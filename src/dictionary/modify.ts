@@ -8,10 +8,8 @@ export function modify<T>(key: string, f: (x: T) => T, dict: Dictionary<T>): Dic
     return insert(key, f(dict[key]), dict);
 }
 
-export function modifyC<T>(key: string): (f: (x: T) => T) => (dict: Dictionary<T>) => Dictionary<T> {
-    return function (f: (x: T) => T): (dict: Dictionary<T>) => Dictionary<T> {
-        return function (dict: Dictionary<T>): Dictionary<T> {
-            return modify(key, f, dict);
-        }
+export function modifyC<T>(key: string, f: (x: T) => T): (dict: Dictionary<T>) => Dictionary<T> {
+    return function (dict: Dictionary<T>): Dictionary<T> {
+        return modify(key, f, dict);
     }
 }
