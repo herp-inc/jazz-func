@@ -32,7 +32,7 @@ describe('Dictionary.filter()', () => {
         }
         function takesNumberDictionary(_: Dictionary<number>): void {}
 
-        takesNumberDictionary(filter(isNumber, dict)); // typechecks
+        takesNumberDictionary(filter<number, number | string>(isNumber, dict)); // typechecks
     });
 });
 
@@ -52,7 +52,7 @@ describe('Dictionary.filterC()', () => {
         }
         function takesNumberDictionary(_: Dictionary<number>): void {}
 
-        takesNumberDictionary(filterC(isNumber)(dict)); // typechecks
+        takesNumberDictionary(filterC<number, number | string>(isNumber)(dict)); // typechecks
     });
 });
 

@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            yarn
+      - run:
+          name: Build
+          command: |
+            yarn tsc --noEmit
+      - run:
+          name: Run tests
+          command: |
+            yarn test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
