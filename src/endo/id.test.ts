@@ -1,12 +1,10 @@
-import 'mocha';
-import * as assert from 'power-assert';
-import { Endo, id } from '../../src/endo';
+import { Endo, id } from './';
 
-describe('Endo.id()', () => {
+describe(id, () => {
     it('should return the passed argument', () => {
         const x = { foo: 42 };
 
-        assert.equal(id(x), x);
+        expect(id(x)).toEqual(x);
     });
 
     it('should behave as Endo<T>', () => {

@@ -1,8 +1,6 @@
-import 'mocha';
-import * as assert from 'power-assert';
-import { Dictionary, entries } from '../../src/dictionary';
+import { Dictionary, entries } from './';
 
-describe('Dictionary.entries()', () => {
+describe(entries, () => {
     it('should return an array of key/value tuples', () => {
         const dict: Dictionary<number> = {
             zero: 0,
@@ -10,7 +8,7 @@ describe('Dictionary.entries()', () => {
             two: 2,
         };
 
-        assert.deepEqual(entries(dict), [
+        expect(entries(dict)).toEqual([
             ['zero', 0],
             ['one', 1],
             ['two', 2]

@@ -1,6 +1,4 @@
-import 'mocha';
-import * as assert from 'power-assert';
-import { Dictionary, filter, filterC } from '../../src/dictionary';
+import { Dictionary, filter, filterC } from './';
 
 const dict: Dictionary<number> = {
     zero: 0,
@@ -16,9 +14,9 @@ const expected: Dictionary<number> = {
     four: 4
 }
 
-describe('Dictionary.filter()', () => {
+describe(filter, () => {
     it('should filter out elements', () => {
-        assert.deepEqual(filter(n => n % 2 === 0, dict), expected);
+        expect(filter(n => n % 2 === 0, dict)).toEqual(expected);
     });
 
     it('should return subtyped dictionary when passed a type predicate', () => {
@@ -36,9 +34,9 @@ describe('Dictionary.filter()', () => {
     });
 });
 
-describe('Dictionary.filterC()', () => {
+describe(filterC, () => {
     it('should filter out elements', () => {
-        assert.deepEqual(filterC<number>(n => n % 2 === 0)(dict), expected);
+        expect(filterC<number>(n => n % 2 === 0)(dict)).toEqual(expected);
     });
 
     it('should return subtyped dictionary when passed a type predicate', () => {
