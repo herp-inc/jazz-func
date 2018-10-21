@@ -10,6 +10,10 @@ jobs:
           command: |
             yarn
       - run:
+          name: Run Prettier
+          command: |
+            yarn prettier:check
+      - run:
           name: Build
           command: |
             yarn tsc --noEmit
