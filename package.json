@@ -26,6 +26,8 @@
   "repository": "git@github.com:herp-inc/jazz-func.git",
   "scripts": {
     "build": "bin/deploy.sh",
+    "prettier:check": "prettier --list-different 'src/**/*.ts'",
+    "prettier:format": "prettier --write 'src/**/*.ts'",
     "test": "jest"
   }
 }
