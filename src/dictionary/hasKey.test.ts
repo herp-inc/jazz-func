@@ -7,7 +7,7 @@ describe(hasKey, () => {
     });
 
     it('should return false when the key is not present in the given dictionary', () => {
-        expect(hasKey('foo', empty())).toBe(false)
+        expect(hasKey('foo', empty())).toBe(false);
     });
 
     it('should behave as a type guard', () => {
@@ -15,7 +15,7 @@ describe(hasKey, () => {
 
         if (hasKey('x', dict)) {
             const record: Record<'x', number> = dict; // this should typecheck
-            expect(record.x).toBe(0)
+            expect(record.x).toBe(0);
 
             const anotherDict: Dictionary<number> = dict; // it still behaves as a dictionary
             expect(anotherDict.y).toBe(42);
@@ -40,7 +40,7 @@ describe(hasKeyC, () => {
             expect(record.x).toBe(0);
 
             const anotherDict: Dictionary<number> = dict; // it still behaves as a dictionary
-            expect(anotherDict.y).toBe(42)
+            expect(anotherDict.y).toBe(42);
         }
     });
 });

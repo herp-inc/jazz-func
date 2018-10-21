@@ -20,7 +20,7 @@ export function filter<T>(f: (x: T) => boolean, dict: Dictionary<T>): Dictionary
 export function filterC<T>(f: (x: T) => boolean): (dict: Dictionary<T>) => Dictionary<T>;
 export function filterC<S extends T, T>(f: (x: T) => x is S): (dict: Dictionary<T>) => Dictionary<S>;
 export function filterC<T>(f: (x: T) => boolean): (dict: Dictionary<T>) => Dictionary<T> {
-    return function (dict: Dictionary<T>): Dictionary<T> {
+    return function(dict: Dictionary<T>): Dictionary<T> {
         return filter(f, dict);
-    }
+    };
 }

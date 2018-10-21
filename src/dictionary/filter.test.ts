@@ -11,8 +11,8 @@ const dict: Dictionary<number> = {
 const expected: Dictionary<number> = {
     zero: 0,
     two: 2,
-    four: 4
-}
+    four: 4,
+};
 
 describe(filter, () => {
     it('should filter out elements', () => {
@@ -23,7 +23,7 @@ describe(filter, () => {
         const dict: Dictionary<number | string> = {
             foo: 6,
             bar: '28',
-            baz: 496
+            baz: 496,
         };
         function isNumber(x: any): x is number {
             return typeof x === 'number';
@@ -43,7 +43,7 @@ describe(filterC, () => {
         const dict: Dictionary<number | string> = {
             foo: 6,
             bar: '28',
-            baz: 496
+            baz: 496,
         };
         function isNumber(x: any): x is number {
             return typeof x === 'number';
@@ -53,4 +53,3 @@ describe(filterC, () => {
         takesNumberDictionary(filterC<number, number | string>(isNumber)(dict)); // typechecks
     });
 });
-

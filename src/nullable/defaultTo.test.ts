@@ -1,6 +1,5 @@
 import { defaultTo, defaultToC } from '../../src/nullable/defaultTo';
 
-
 describe(defaultTo, () => {
     const num: number = 42;
     it('should defaultTo return first argument with null', () => {

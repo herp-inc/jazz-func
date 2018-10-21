@@ -6,7 +6,7 @@ export function entries<T>(dict: Dictionary<T>): Entry<T>[] {
 
     for (const key in dict) {
         const x: Entry<T> = [key, dict[key] as T];
-        xs.push(x)
+        xs.push(x);
     }
 
     return xs;

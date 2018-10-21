@@ -12,8 +12,8 @@ export function insertMany<T>(entries: Entry<T>[], dict: Dictionary<T>): Diction
     return newDict;
 }
 
-export function insertManyC<T>(entries: Entry<T>[]):(dict: Dictionary<T>) => Dictionary<T> {
-    return function (dict) {
+export function insertManyC<T>(entries: Entry<T>[]): (dict: Dictionary<T>) => Dictionary<T> {
+    return function(dict) {
         return insertMany(entries, dict);
-    }
+    };
 }
