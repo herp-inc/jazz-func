@@ -8,3 +8,4 @@ tsc -p . --module commonjs
 rollup -c rollup.config.js
 cp package.json lib
 cp README.md lib
+find ./lib -name '*.test.js' -or -name '*.test.mjs' -or -name '*.test.d.ts' | xargs rm
