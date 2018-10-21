@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -eu
 rm -rf lib
 tsc -p .
 for nm in lib/*.js lib/**/*.js; do
