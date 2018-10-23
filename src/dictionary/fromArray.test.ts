@@ -1,14 +1,12 @@
-import 'mocha';
-import * as assert from 'power-assert';
-import { fromArray } from '../../src/dictionary';
+import { fromArray } from './';
 
-describe('Dictionary.fromArray()', () => {
+describe(fromArray, () => {
     it('should create a new dictionary from a key-value array', () => {
-        assert.deepEqual(fromArray([
+        expect(fromArray([
             ['zero', 0],
             ['one', 1],
             ['two', 2]
-        ]), {
+        ])).toEqual({
             zero: 0,
             one: 1,
             two: 2

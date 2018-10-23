@@ -1,41 +1,39 @@
-import 'mocha';
-import * as assert from 'power-assert';
 import { alt, altC } from '../../src/nullable/alt';
 
-describe('Nullable.alt()', () => {
+describe(alt, () => {
     it('should return null when the both arguments are null', () => {
-        assert.equal(alt(null, null), null);
+        expect(alt(null, null)).toBe(null);
     });
 
     it('should return the first argument when it is a non-null value and the second one is null', () => {
-        assert.equal(alt(42, null), 42);
+        expect(alt(42, null)).toBe(42);
     });
 
     it('should return the second argument when it is a non-null value and the first one is null', () => {
-        assert.equal(alt(null, 42), 42);
+        expect(alt(null, 42)).toBe(42);
     });
 
     it('should return the first argument when it is a non-null value and the second one is also non-null', () => {
         const value: number | string | null = alt(42, 'hello, world');
-        assert.deepEqual(value, 42);
+        expect(value).toBe(42);
     });
 });
 
-describe('Nullable.altC()', () => {
+describe(altC, () => {
     it('should return null when the both arguments are null', () => {
-        assert.equal(altC(null)(null), null);
+        expect(altC(null)(null)).toBe(null);
     });
 
     it('should return the first argument when it is a non-null value and the second one is null', () => {
-        assert.equal(altC(42)(null), 42);
+        expect(altC(42)(null)).toBe(42);
     });
 
     it('should return the second argument when it is a non-null value and the first one is null', () => {
-        assert.equal(altC(null)(42), 42);
+        expect(altC(null)(42)).toBe(42);
     });
 
     it('should return the first argument when it is a non-null value and the second one is also non-null', () => {
         const value: number | string | null = altC(42)('hello, world');
-        assert.deepEqual(value, 42);
+        expect(value).toBe(42);
     });
 });

@@ -1,14 +1,12 @@
-import 'mocha';
-import * as assert from 'power-assert';
-import { isNotNull, Nullable } from '../../src/nullable';
+import { isNotNull, Nullable } from './';
 
-describe('Nullable.isNotNull()', () => {
+describe(isNotNull, () => {
     it('should return true when given a non-null value', () => {
-        assert.equal(isNotNull(42), true);
+        expect(isNotNull(42)).toBe(true);
     });
 
     it('should return false when given a null value', () => {
-        assert.equal(isNotNull(null), false);
+        expect(isNotNull(null)).toBe(false);
     });
 
     it('should behave as a typeguard', () => {
