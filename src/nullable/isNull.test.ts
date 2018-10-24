@@ -7,7 +7,7 @@ describe(isNull, () => {
 
     it('should return false when given a non-null value', () => {
         expect(isNull(42)).toBe(false);
-    })
+    });
 
     it('should return false when given an undefined value', () => {
         expect(isNull(void 0)).toBe(false);
@@ -17,7 +17,7 @@ describe(isNull, () => {
         const x: Nullable<number> = 42;
 
         if (isNull(x)) {
-            throw new Error('x must not be null')
+            throw new Error('x must not be null');
         } else {
             const y: number = x; // typechecks
             expect(y).toBe(42);

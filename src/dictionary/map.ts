@@ -8,7 +8,7 @@ export function map<T, U>(f: (x: T) => U, dict: Dictionary<T>): Dictionary<U> {
 }
 
 export function mapC<T, U>(f: (x: T) => U): (dict: Dictionary<T>) => Dictionary<U> {
-    return function (dict: Dictionary<T>): Dictionary<U> {
+    return function(dict: Dictionary<T>): Dictionary<U> {
         return map(f, dict);
-    }
+    };
 }

@@ -2,12 +2,12 @@ import { Dictionary, mapWithKey, mapWithKeyC } from './';
 
 const dict: Dictionary<number> = {
     zero: 0,
-    one: 1
+    one: 1,
 };
 
 const expected: Dictionary<string> = {
     zero: 'zero: 0',
-    one: 'one: 1'
+    one: 'one: 1',
 };
 
 describe(mapWithKey, () => {

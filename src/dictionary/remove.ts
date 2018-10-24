@@ -10,7 +10,7 @@ export function remove<T>(key: string, dict: Dictionary<T>): Dictionary<T> {
 }
 
 export function removeC<T>(key: string): (dict: Dictionary<T>) => Dictionary<T> {
-    return function (dict: Dictionary<T>): Dictionary<T> {
+    return function(dict: Dictionary<T>): Dictionary<T> {
         return remove(key, dict);
-    }
+    };
 }
