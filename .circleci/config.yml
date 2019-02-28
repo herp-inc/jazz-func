@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            yarn test
+            yarn test --maxWorkers=1
 
 workflows:
   version: 2
