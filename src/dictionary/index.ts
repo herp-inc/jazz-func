@@ -1,4 +1,5 @@
 export { Dictionary } from './Dictionary';
+export { Entry } from './Entry';
 export { empty } from './empty';
 export { entries } from './entries';
 export { filter, filterC } from './filter';
