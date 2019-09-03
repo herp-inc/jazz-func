@@ -25,7 +25,7 @@ describe(removeC, () => {
     });
 
     it('does nothing when the given value is not in the given set', () => {
-        const set = new Set();
+        const set: Set<number> = new Set();
         const expected = new Set();
 
         expect(removeC(42)(set)).toEqual(expected);

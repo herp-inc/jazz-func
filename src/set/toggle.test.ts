@@ -23,7 +23,7 @@ describe(toggle, () => {
 describe(toggleC, () => {
     describe('when the given value is not contained in the given set', () => {
         it('adds the given value to the given set', () => {
-            const set = new Set();
+            const set: Set<number> = new Set();
             const expected = new Set([42]);
 
             expect(toggleC(42)(set)).toEqual(expected);

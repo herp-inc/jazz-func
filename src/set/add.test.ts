@@ -18,7 +18,7 @@ describe(add, () => {
 
 describe(addC, () => {
     it('adds the given value to the given set', () => {
-        const set = new Set();
+        const set: Set<number> = new Set();
         const expected = new Set([42]);
 
         expect(addC(42)(set)).toEqual(expected);
